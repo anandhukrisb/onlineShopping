@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product - ShopEasy</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <!-- Navbar will be injected here -->
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h4 class="mb-0 fw-bold">Edit Product</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="editProductForm">
+                            <input type="hidden" id="productId">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Product Name" required>
+                                <label for="name">Product Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="price" placeholder="Price" step="0.01"
+                                    required>
+                                <label for="price">Price ($)</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="description" placeholder="Description"
+                                    style="height: 100px" required></textarea>
+                                <label for="description">Description</label>
+                            </div>
+                            <div class="form-floating mb-4">
+                                <input type="url" class="form-control" id="imagename" placeholder="Image URL" required>
+                                <label for="imagename">Image URL</label>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">Update Product</button>
+                                <a href="shop.html" class="btn btn-outline-secondary">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snackbar -->
+    <div id="snackbar"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

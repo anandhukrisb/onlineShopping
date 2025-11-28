@@ -1,0 +1,139 @@
+/* Modern Color Palette */
+:root {
+    --primary-color: #6200ea; /* Deep Purple */
+    --primary-light: #9d46ff;
+    --secondary-color: #03dac6; /* Teal */
+    --background-color: #f5f5f5;
+    --surface-color: #ffffff;
+    --text-primary: #121212;
+    --text-secondary: #666666;
+    --error-color: #b00020;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif; /* Material Design Font */
+    color: var(--text-primary);
+}
+
+/* Navbar Overrides */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Material Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    background-color: var(--surface-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Material Buttons */
+.btn {
+    border-radius: 24px; /* Pill shape */
+    padding: 8px 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn-floating {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Form Inputs */
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.1);
+}
+
+.form-floating > label {
+    padding-left: 12px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    padding: 80px 0;
+    border-radius: 0 0 24px 24px;
+    margin-bottom: 40px;
+}
+
+/* Snackbar */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
